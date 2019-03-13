@@ -1,4 +1,4 @@
 *
 
-!nginx.conf
+!nginx.vh.default.conf
 !docker-entrypoint.sh

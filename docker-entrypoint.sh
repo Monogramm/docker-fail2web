@@ -2,16 +2,16 @@
 set -e
 
 # Update the default config with environment variables
-if [ -f /etc/nginx/nginx.conf ]; then
-	echo "fail2web nginx configuration initialization..."
+if [ -f /etc/nginx/conf.d/default.conf ]; then
+	echo "fail2web nginx vhosts configuration initialization..."
 
 	sed -i \
 		-e "s|proxy_pass .*;|proxy_pass $FAIL2REST_ADDR;|g" \
-		/etc/nginx/nginx.conf
+		/etc/nginx/conf.d/default.conf
 
-	echo "fail2web nginx configuration generated"
+	echo "fail2web nginx vhosts configuration generated"
 else
-	echo "fail2web nginx configuration not found!"
+	echo "fail2web nginx vhosts configuration not found!"
 	exit 1
 fi
 

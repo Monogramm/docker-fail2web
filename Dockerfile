@@ -8,7 +8,7 @@ ENV FAIL2REST_ADDR=http://localhost:5000/ \
 	FAIL2REST_PASSWD_COST=15
 
 COPY docker-entrypoint.sh /entrypoint.sh
-COPY nginx.conf /etc/nginx/
+COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
 ADD https://github.com/Sean-Der/fail2web/archive/master.tar.gz /tmp/fail2web.tar.gz
 
 RUN set -ex; \
