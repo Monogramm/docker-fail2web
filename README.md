@@ -32,8 +32,9 @@ This parameter sets the local address of fail2rest.
 
 Examples:
 ```
-DOLI_AUTO_CONFIGURE='http://localhost:5000/'
-DOLI_AUTO_CONFIGURE='http://127.0.0.1:5000/'
+FAIL2REST_ADDR='http://localhost:5000/'
+FAIL2REST_ADDR='http://127.0.0.1:5000/'
+FAIL2REST_ADDR='http://fail2rest:5000/'
 ```
 
 
@@ -45,9 +46,9 @@ This parameter sets the default htpasswd username. **Only used on first run.**
 
 Examples:
 ```
-DOLI_AUTO_CONFIGURE='admin'
-DOLI_AUTO_CONFIGURE='root'
-DOLI_AUTO_CONFIGURE='john.doe'
+FAIL2REST_USER='admin'
+FAIL2REST_USER='root'
+FAIL2REST_USER='john.doe'
 ```
 
 
@@ -59,8 +60,8 @@ This parameter sets the default htpasswd password. **Only used on first run.**
 
 Examples:
 ```
-DOLI_AUTO_CONFIGURE=somethingverysecure
-DOLI_AUTO_CONFIGURE=somethingrandomlygenerated
+FAIL2REST_PASSWD=somethingverysecure
+FAIL2REST_PASSWD=somethingrandomlygenerated
 ```
 
 
