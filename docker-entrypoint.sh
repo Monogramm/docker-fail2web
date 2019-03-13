@@ -17,7 +17,7 @@ if [ ! -f /srv/fail2web/.htpasswd ]; then
 	echo "fail2web htpasswd initialization..."
 
 	mkdir -p /srv/fail2web/.htpasswd
-	htpasswd -Bb -C 10 /srv/fail2web/.htpasswd "$FAIL2REST_USER" "$FAIL2REST_PASSWD" >
+	htpasswd -Bb -C 10 /srv/fail2web/.htpasswd "$FAIL2REST_USER" "$FAIL2REST_PASSWD"
 
 	echo "fail2web htpasswd generated"
 fi
