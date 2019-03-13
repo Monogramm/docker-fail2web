@@ -16,6 +16,7 @@ RUN set -ex; \
 	# install the packages we need
 	apk add --no-cache \
 		apache2-utils \
+		tar \
 	; \
 	# Get and install fail2web
 	mkdir -p /var/www/html/; \
