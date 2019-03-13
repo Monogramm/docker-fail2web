@@ -1,0 +1,29 @@
+version: 2
+
+services:
+  fail2web:
+    image: monogramm/docker-fail2web
+    container_name: fail2web
+    restart: always
+    ports:
+      - "80:80"
+    environment:
+      - FAIL2REST_ADDR=http://fail2rest:5000/
+      - FAIL2REST_USER=fail2web-admin
+      - FAIL2REST_PASSWD=youshouldoverwritethiswithsomethingrandomlygenerated
+    volumes:
+      - /srv/fail2web/:/srv/fail2web/
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+
+  fail2rest:
+    image: monogramm/docker-fail2rest
+    container_name: fail2rest
+    restart: always
+    ports:
+      - "5000:5000"
+    volumes:
+      - /srv/fail2rest/:/srv/fail2rest/
+      - /var/run/fail2ban/fail2ban.sock/:/var/run/fail2ban/fail2ban.sock
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
