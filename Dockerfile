@@ -7,8 +7,6 @@ ENV FAIL2REST_ADDR=http://localhost:5000/ \
 	FAIL2REST_PASSWD=youshouldoverwritethis \
 	FAIL2REST_PASSWD_COST=15
 
-WORKDIR /go/src/app
-
 COPY docker-entrypoint.sh /entrypoint.sh
 COPY nginx.conf /etc/nginx/
 ADD https://github.com/Sean-Der/fail2web/archive/master.tar.gz /tmp/fail2web.tar.gz
@@ -29,3 +27,4 @@ RUN set -ex; \
 VOLUME /srv/fail2web/ /var/www/html/fail2web
 
 ENTRYPOINT ["/entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]
