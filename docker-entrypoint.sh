@@ -16,8 +16,12 @@ fi
 if [ ! -f /srv/fail2web/.htpasswd ]; then
 	echo "fail2web htpasswd initialization..."
 
+	if [ -z "$FAIL2REST_PASSWD_COST" ]; then
+		FAIL2REST_PASSWD_COST=15
+	fi
+
 	mkdir -p /srv/fail2web/
-	htpasswd -Bbc -C 10 /srv/fail2web/.htpasswd "$FAIL2REST_USER" "$FAIL2REST_PASSWD"
+	htpasswd -Bbc -C $FAIL2REST_PASSWD_COST /srv/fail2web/.htpasswd "$FAIL2REST_USER" "$FAIL2REST_PASSWD"
 
 	echo "fail2web htpasswd generated"
 fi

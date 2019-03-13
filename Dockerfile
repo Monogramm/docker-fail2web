@@ -3,8 +3,9 @@ FROM nginx:alpine
 LABEL maintainer="Mathieu BRUNOT <mathieu.brunot at monogramm dot io>"
 
 ENV FAIL2REST_ADDR=http://localhost:5000/ \
-	FAIL2REST_USER=root \
-	FAIL2REST_PASSWD=youshouldoverwritethis
+	FAIL2REST_USER=admin.fail2ban \
+	FAIL2REST_PASSWD=youshouldoverwritethis \
+	FAIL2REST_PASSWD_COST=15
 
 WORKDIR /go/src/app
 
