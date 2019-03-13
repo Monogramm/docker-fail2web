@@ -10,6 +10,9 @@ if [ -f /etc/nginx/nginx.conf ]; then
 		/etc/nginx/nginx.conf
 
 	echo "fail2web nginx configuration generated"
+else
+	echo "fail2web nginx configuration not found!"
+	exit 1
 fi
 
 # Create the default htpasswd
@@ -24,6 +27,8 @@ if [ ! -f /srv/fail2web/.htpasswd ]; then
 	htpasswd -Bbc -C $FAIL2REST_PASSWD_COST /srv/fail2web/.htpasswd "$FAIL2REST_USER" "$FAIL2REST_PASSWD"
 
 	echo "fail2web htpasswd generated"
+else
+	echo "fail2web htpasswd found"
 fi
 
 echo "fail2web starting..."
