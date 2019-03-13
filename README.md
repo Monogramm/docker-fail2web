@@ -13,11 +13,13 @@
 
 This Docker repository provides the [fail2web](https://github.com/Sean-Der/fail2web) server with a configuration suitable to use with [fail2rest](https://github.com/Sean-Der/fail2rest).
 
-:construction: **This is image and its resources are still in development!**
-
 ## Build Docker image
 
 Install Docker and then run `docker build -t docker-fail2web .` to build the image.
+
+## How to run this image ?
+
+This image is designed to be used in a micro-service environment. You can easily setup your fail2web with the sample [docker-compose.yml](docker-compose.yml).
 
 ## Auto configuration via environment variables
 

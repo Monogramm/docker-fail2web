@@ -24,6 +24,7 @@ services:
       - "5000:5000"
     volumes:
       - /srv/fail2rest/:/srv/fail2rest/
+      # Mount directory containing fail2ban.sock
       - /var/run/fail2ban/:/var/run/fail2ban/
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
