@@ -14,7 +14,7 @@ fi
 
 # Create the default htpasswd
 if [ ! -f /srv/fail2web/.htpasswd ]; then
-	echo "fail2web security initialization..."
+	echo "fail2web htpasswd initialization..."
 
 	mkdir -p /srv/fail2web/.htpasswd
 	htpasswd -Bb -C 10 /srv/fail2web/.htpasswd "$FAIL2REST_USER" "$FAIL2REST_PASSWD" >
