@@ -29,4 +29,3 @@ RUN set -ex; \
 VOLUME /srv/fail2web/ /var/www/html/fail2web
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/bin/sh", "-c", "service nginx start && tail -f /dev/null"]
