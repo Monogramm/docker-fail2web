@@ -20,7 +20,7 @@ RUN set -ex; \
 	; \
 	# Get and install fail2web
 	mkdir -p /var/www/html/; \
-    tar xzf /tmp/fail2web.tar.gz /var/www/html/;  \
+    tar xzf /tmp/fail2web.tar.gz -C /var/www/html/;  \
     rm -f /tmp/fail2web.tar.gz; \
 	# Make sure the entrypoint is executable
 	chmod 755 /entrypoint.sh
