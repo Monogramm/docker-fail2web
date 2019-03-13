@@ -27,4 +27,3 @@ RUN set -ex; \
 VOLUME /srv/fail2web/ /var/www/html/fail2web
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["nginx", "-g", "daemon off;"]

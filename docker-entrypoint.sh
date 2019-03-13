@@ -32,4 +32,4 @@ else
 fi
 
 echo "fail2web starting..."
-exec "$@"
+nginx -g daemon off;
