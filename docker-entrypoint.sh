@@ -6,7 +6,7 @@ if [ -f /etc/nginx/nginx.conf ]; then
 	echo "fail2web nginx configuration initialization..."
 
 	sed -i \
-		-e "s|proxy_pass .*|proxy_pass $FAIL2REST_ADDR|g"
+		-e "s|proxy_pass .*|proxy_pass $FAIL2REST_ADDR|g" \
 		/etc/nginx/nginx.conf
 
 	echo "fail2web nginx configuration generated"
