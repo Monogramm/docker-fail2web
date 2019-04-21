@@ -9,7 +9,7 @@
 [![](https://images.microbadger.com/badges/version/monogramm/docker-fail2web.svg)](https://microbadger.com/images/monogramm/docker-fail2web)
 [![](https://images.microbadger.com/badges/image/monogramm/docker-fail2web.svg)](https://microbadger.com/images/monogramm/docker-fail2web)
 
-# Docker image for fail2rest
+# Docker image for fail2web
 
 This Docker repository provides the [fail2web](https://github.com/Sean-Der/fail2web) server with a configuration suitable to use with [fail2rest](https://github.com/Sean-Der/fail2rest).
 
